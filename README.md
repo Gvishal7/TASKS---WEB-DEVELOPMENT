@@ -1,1 +1,1 @@
-# These are my tasks of Web Development in WebCook Software Solutions
+# These are my tasks of Web Development as a Intern at WebCook Software Solutions
