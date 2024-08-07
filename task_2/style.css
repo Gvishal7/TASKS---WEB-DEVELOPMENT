@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 80%);
+}
+
+.calculator {
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 16px;
+    background: transparent;
+    background-color: hsl(0, 0%, 15%);
+    box-shadow: 0px 3px 20px rgba(40, 40, 41, 1);
+}
+
+input {
+    width: 265px;
+    border: none;
+    padding: 24px;
+    margin: 10px;
+    background: transparent;
+    background-color: hsl(0, 0%, 30%);
+    color: #ffffff;
+    border-radius: 10px;
+    text-align: right;
+    font-size: 40px;
+    box-shadow: 0px 3px 15px rgba(84, 84, 84, 0.1);
+    cursor: pointer;
+}
+
+input::placeholder {
+    color: #ffffff;
+}
+
+button {
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    background: transparent;
+    background-color: hsl(0, 0%, 30%);
+    color: #ffffff;
+    box-shadow: -3px -3px 15px  rgba(255, 255, 255, 0.45);
+    font-size: 23px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 40%);
+}
+
+button:active {
+    background-color: hsl(0, 0%, 50%);
+}
+
+.eqlBtn {
+    background-color: #fb7c14;
+}
+
+.eqlBtn:hover {
+    background-color: hsl(35, 100%, 65%);
+}
+
+.eqlBtn:active {
+    background-color: hsl(35, 100%, 75%);
+}
+
+.operator {
+    color: #fb7c14;
+}
