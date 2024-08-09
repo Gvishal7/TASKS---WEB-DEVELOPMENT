@@ -3,18 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo List App</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>To-Do List</h1>
-        <form id="taskForm">
-            <input type="text" id="taskNameInput" placeholder="Enter Your Task Name" required>
-            <button type="submit">Add Task</button>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I am Gagula Vishal, a Web Developer. I specialize in Web Development.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>A To-Do List</h3>
+            <p>This is developed with using HTML, CSS and JAVASCRIPT. <br>
+                Key Features: <br>
+                - Edit a task. <br>
+                - Delete a task. <br>
+                - Mark a task as completed. <br> <br>
+                Here is my git repository link:
+                <a href="https://github.com/Gvishal7/TASKS---WEB-DEVELOPMENT.git" target="_blank">Git Repository</a>
+            </p>
+        </div>
+        <div class="project">
+            <h3>A Calculator</h3>
+            <p>This is developed with using core HTML, CSS and JAVASCRIPT. <br>
+                Key Features: <br>
+                - It can perform basic Arithmatic operations such as :-- <br> - 'Addition' <br> - 'Subtraction' <br> -
+                'Multiplication' <br> - 'Division' and etc.. . <br> <br>
+                Here is my git repository link:
+                <a href="https://github.com/Gvishal7/TASKS---WEB-DEVELOPMENT.git" target="_blank">Git Repository</a>
+            </p>
+        </div>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Microsoft Office</li>
+            <li>JavaScript</li>
+            <li>Html</li>
+            <li>CSS</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact Information</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
         </form>
-        <ul id="taskList"></ul>
-    </div>
+        <p>Email: <a href="mailto:gvp2611@gmail.com">gvp2611@gmail.com</a></p>
+        <p>LinkedIn: <a
+                href="https://www.linkedin.com/in/gagula-vishal-0694b8319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "
+                target="_blank">LinkedIn Profile</a></p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Gagula Vishal. All rights reserved.</p>
+    </footer>
     <script src="app.js"></script>
 </body>
 </html>

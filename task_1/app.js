@@ -1,61 +1,23 @@
-const taskForm = document.querySelector('#taskForm');
-const taskList = document.querySelector('#taskList');
-const taskNameInput = document.querySelector('#taskNameInput');
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('section');
 
-let tasks = [];
-
-function renderTasks() {
-    taskList.innerHTML = '';
-    tasks.forEach((task, index) => {
-        const taskItem = document.createElement('li');
-        taskItem.innerHTML =
-            ` <span>${task.name}</span>
-            <span>
-                <button onclick="toggleComplete(${index})">${task.completed ? 'Undo' : 'Complete'}</button>
-                <button onclick="editTask(${index})">Edit</button>
-                <button onclick="deleteTask(${index})">Delete</button>
-            </span> `;
-        if (task.completed) {
-            taskItem.classList.add('completed');
-        }
-        taskList.appendChild(taskItem);
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1
     });
-}
 
-function addTask(event) {
-    event.preventDefault();
-    const name = taskNameInput.value.trim();
-    if (name === '') {
-        alert('Task name cannot be empty!');
-        return;
-    }
-    const newTask = {
-        name,
-        completed: false
-    };
-    tasks.push(newTask);
-    taskForm.reset();
-    renderTasks();
-}
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 
-function toggleComplete(index) {
-    tasks[index].completed = !tasks[index].completed;
-    renderTasks();
-}
-
-function editTask(index) {
-    const newName = prompt('Enter new task name:', tasks[index].name);
-    if (newName !== null) {
-        tasks[index].name = newName.trim();
-        renderTasks();
-    }
-}
-
-function deleteTask(index) {
-    tasks.splice(index, 1);
-    renderTasks();
-}
-
-taskForm.addEventListener('submit', addTask);
-
-renderTasks();
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Thank you for your message!');
+        this.reset();
+    });
+});
